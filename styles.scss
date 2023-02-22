@@ -1,6 +1,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -38,12 +40,13 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  .list {
-    width: 350px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  //что это такое???
+  //&-list {
+  //  width: 350px;
+  //  display: flex;
+  //  justify-content: space-between;
+  //  align-items: center;
+  //}
 }
 
 .aside-wrapper {
@@ -60,15 +63,18 @@ a {
 
 .header-button {
 
-  width: 210px;
-  height: 60px;
+  min-width: 210px;
+  min-height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 23px;
   background: none;
   border: 1px solid #9C69E2;
-  box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+  box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
   border-radius: 50px;
+
 }
 
 .header-button-text {
@@ -76,18 +82,18 @@ a {
   line-height: 25.6px;
   font-family: 'Montserrat', sans-serif;
 
+
 }
 
 .first-screen {
 
-  width: 100%;
-  height: 498px;
+  min-height: 498px;
   position: relative;
   margin-bottom: 100px;
 
   .first-screen-title {
-    width: 601px;
-    height: 177px;
+    max-width: 600px;
+    //height: 177px;
     font-weight: 700;
     font-size: 80px;
     line-height: 110%;
@@ -96,8 +102,8 @@ a {
   }
 
   .first-screen-text {
-    width: 370px;
-    height: 117px;
+    max-width: 370px;
+    //height: 117px;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
@@ -124,10 +130,11 @@ a {
 
   .first-screen__image {
     position: absolute;
-    width: 770px;
-    height: 407px;
-    top: 65px;
-    right: 0px;
+    width: 100%;
+    max-width: 770px;
+    //max-height: 407px;
+    bottom: 0;
+    right: 0;
 
   }
 }
@@ -213,12 +220,14 @@ a {
 
   .cards {
     width: 100%;
-    height: 850px;
+    //height: 850px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+
 
     .card {
+      position: relative;
       width: 400px;
       height: 400px;
       border-radius: 50px;
@@ -226,15 +235,17 @@ a {
       flex-direction: column;
       align-items: center;
       padding: 62px 70px 62px 100px;
+      margin-bottom: 50px;
+
       .card-title {
-        width: 170px;
-        height: 30px;
+        //width: 170px;
+        //height: 30px;
         font-family: 'Work Sans', sans-serif;
         font-weight: 400;
         font-size: 24px;
         line-height: 130%;
         color: #212353;
-        //margin-bottom: 20px;
+        margin-bottom: 20px;
       }
       .card-info {
         width: 230px;
@@ -263,6 +274,43 @@ a {
       background: #EAF6FC;
     }
   }
+
+}
+
+.card-image {
+position: absolute;
+  top: 100px;
+  right: 330px;
+
+}
+
+.card-wrapper {
+  width: 570px;
+  height: 400px;
+}
+
+.card-content {
+  width: 230px;
+  height: 276px;
+  display: flex;
+  flex-direction: column;
+
+  .card-button {
+    border: none;
+    color: #212353;
+    display: flex;
+    align-items: center;
+    background: none;
+ &-text{
+   margin-right: 20px;
+   font-weight: 700;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   line-height: 160%;
+   letter-spacing: 0.005em;
+ }
+  }
+
 
 }
 
