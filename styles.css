@@ -151,15 +151,12 @@ a {
 
 .features {
   width: 100%;
-  height: 1078px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .features .features-heading {
-  width: 638px;
-  height: 148px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,19 +184,20 @@ a {
 }
 .features .cards {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 30px;
 }
 .features .cards .card {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 570px;
+  height: 100%;
+  min-height: 400px;
   border-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 62px 70px 62px 100px;
   margin-bottom: 50px;
 }
 .features .cards .card .card-title {
@@ -211,8 +209,8 @@ a {
   margin-bottom: 20px;
 }
 .features .cards .card .card-info {
-  width: 230px;
-  height: 180px;
+  height: 100%;
+  max-height: 180px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -220,35 +218,40 @@ a {
   color: #4B5D68;
   margin-bottom: 20px;
 }
-.features .cards .first-card {
-  background: #F0FAF9;
-}
-.features .cards .second-card {
-  background: #F6F0FD;
-}
-.features .cards .third-card {
-  background: #FEF0F8;
-}
-.features .cards .fourth-card {
-  background: #EAF6FC;
-}
 
 .card-image {
+  display: block;
   position: absolute;
-  top: 100px;
-  right: 330px;
-}
-
-.card-wrapper {
-  width: 570px;
-  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 1;
 }
 
 .card-content {
-  width: 230px;
-  height: 276px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
+  border-radius: 50px;
+  padding: 62px 70px 62px 100px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.card-content__first {
+  background: #F0FAF9;
+}
+.card-content__second {
+  background: #F6F0FD;
+}
+.card-content__third {
+  background: #FEF0F8;
+}
+.card-content__fourth {
+  background: #EAF6FC;
 }
 .card-content .card-button {
   border: none;
@@ -256,6 +259,7 @@ a {
   display: flex;
   align-items: center;
   background: none;
+  cursor: pointer;
 }
 .card-content .card-button-text {
   margin-right: 20px;
