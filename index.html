@@ -16,17 +16,22 @@
 <body>
 <main>
     <header class="header content-wrapper">
-        <nav class="header__nav aside-wrapper">
-            <div class="logo">
-                <img class="header-logo" src="img/Logo.svg" alt="Logo">
+        <div class="logo header__logo">
+            <img class="header__logo-image" src="img/Logo.svg" alt="Logo">
+        </div>
+        <div class="nav-container">
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <ul class="header__nav-list">
-                <li class="header-item"><a href="" class="header__nav-link">About</a></li>
-                <li class="header-item"><a href="" class="header__nav-link">Help</a></li>
-                <li class="header-item"><a href="" class="header__nav-link">Features</a></li>
-                <li class="header-item"><a href="" class="header__nav-link">Sign Up</a></li>
-            </ul>
-        </nav>
+            <nav class="header__nav">
+                <a href="" class="header__nav-link">About</a>
+                <a href="" class="header__nav-link">Help</a>
+                <a href="" class="header__nav-link">Features</a>
+                <a href="" class="header__nav-link">Sign Up</a>
+            </nav>
+        </div>
         <button class="header-button">
             <span class="header-button-text">Request Demo</span>
             <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,8 +54,8 @@
             </p>
             <button class="first-screen-button">Learn more</button>
         </div>
-        <div class="first-screen__image">
-            <img src="img/first-screen-img.png" alt="Data storage">
+        <div class="first-screen__image-wrapper">
+            <img class="first-screen__image" src="img/first-screen-img.png" alt="Data storage">
         </div>
 
     </section>
@@ -146,5 +151,7 @@
     </section>
 
 </main>
+
+<script src="script.js"></script>
 </body>
 </html>
