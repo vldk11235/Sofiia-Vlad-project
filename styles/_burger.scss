@@ -1,0 +1,118 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+
+
+    span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      border-radius: 5px;
+      background: black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    &.active {
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(1) {
+        transform-origin: center center;
+        transform: rotate(45deg) translate(6px, 5px);
+      }
+      span:nth-child(3) {
+        transform-origin: center center;
+        transform: rotate(-45deg) translate(6px, -5px);
+      }
+    }
+  }
+
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+
+
+    &-link {
+      font-family: Montserrat, sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      color: black;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #5db3ff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .header__nav {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      background: linear-gradient(243.43deg, rgba(85, 183, 255, 0.6) 16.9%, rgba(126, 90, 255, 0.6) 83.27%);
+      border-top: 1px solid white;
+      box-shadow: #4B5562;
+      z-index: 1;
+      transition: all 0.5s ease-in-out;
+
+      &-link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid white;
+        padding: 20px 20px 20px;
+        color: white;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    .header__nav.show {
+      display: flex;
+      width: 50%;
+      gap: 0;
+      color: white;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    .header__nav.show {
+      width: 100%;
+    }
+  }
+}
