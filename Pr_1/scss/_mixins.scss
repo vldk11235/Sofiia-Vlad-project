@@ -1,0 +1,38 @@
+@mixin fontStyle($f-weight, $f-size, $l-hight, $f-color) {
+    font-weight: $f-weight;
+    font-size: $f-size;
+    line-height: $l-hight;
+    color: $f-color;
+  }
+  
+  @mixin flexStyle($d-flex, $j-cont, $a-items, $f-direct, $gap) {
+    display: $d-flex;
+    justify-content: $j-cont;
+    align-items: $a-items;
+    gap: $gap;
+    flex-direction: $f-direct;
+  }
+  
+  @mixin linkStyle($f-size, $f-weight, $f-color) {
+    text-decoration: none;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    color: $f-color;
+  }
+  
+  @mixin bgStyle($bg-width, $bg-hight, $bg-color) {
+    width: $bg-width;
+    height: $bg-hight;
+    background: $bg-color;
+    border-radius: 50px;
+  }
+  
+  @mixin bgPicture($p-width, $p-hight, $left, $top) {
+    position: absolute;
+    width: $p-width;
+    height: $p-hight;
+    left: $left;
+    top: $top;
+    z-index: 2;
+  }
+  
