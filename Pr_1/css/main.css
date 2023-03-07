@@ -374,9 +374,11 @@
   }
   
   .testimonials {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
     background: #ccddff;
     border-radius: 50px;
-    border: 1px dashed #b78ef0;
     margin-top: 6vw;
     padding: 4vw;
     position: relative;
@@ -462,7 +464,7 @@
   }
   
   .try {
-    margin: 120px 0 103px;
+    margin: 120px 10% 103px;
     display: flex;
     justify-content: space-between;
   }
@@ -480,7 +482,10 @@
       margin: 10vw 0;
     }
   }
-  
+  .footer{
+    margin-left: 7%;
+    margin-right: 7%;
+  }
   .footer-box {
     display: flex;
     justify-content: space-between;
