@@ -3,6 +3,12 @@
   position: relative;
   margin-bottom: 100px;
 
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    min-height: 730px;
+  }
+
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -73,7 +79,14 @@
     bottom: 0;
     right: 0;
 
-   
+
+    @media screen and (max-width: 1024px) {
+      max-width: 80vw;
+      width: auto;
+
+
+    }
+
     @media screen and (max-width: 768px) {
     max-width: 80vw;
     width: auto;

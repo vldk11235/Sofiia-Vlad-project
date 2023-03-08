@@ -185,6 +185,11 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  @media screen and (max-width: 475px) {
+    margin-bottom: 130px;
+
+  }
+
 }
 
 .features .cards .card {
@@ -229,6 +234,7 @@
   @media screen and (max-width: 475px) {
     top: 110%;
     right: 150px;
+
   }
 }
 
@@ -248,6 +254,7 @@
   @media screen and (max-width: 475px) {
     //max-height: none;
     padding: 62px 30px;
+
 
   }
 }

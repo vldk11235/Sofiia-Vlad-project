@@ -224,6 +224,13 @@ h1, h2, h3, h4 {
   position: relative;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 1024px) {
+  .first-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 730px;
+  }
+}
 @media screen and (max-width: 768px) {
   .first-screen {
     display: flex;
@@ -291,6 +298,12 @@ h1, h2, h3, h4 {
   max-width: 770px;
   bottom: 0;
   right: 0;
+}
+@media screen and (max-width: 1024px) {
+  .first-screen__image {
+    max-width: 80vw;
+    width: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .first-screen__image {
@@ -394,6 +407,11 @@ h1, h2, h3, h4 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (max-width: 475px) {
+  .features .cards {
+    margin-bottom: 130px;
+  }
 }
 
 .features .cards .card {
